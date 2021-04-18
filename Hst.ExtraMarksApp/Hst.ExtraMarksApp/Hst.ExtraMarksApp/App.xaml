@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mtrl="clr-namespace:XF.Material.Forms.Resources;assembly=XF.Material"
+             xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"             
+             mc:Ignorable="d"
+             x:Class="Hst.ExtraMarksApp.App">
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="NavigationPrimary">#E91F64</Color>
+            <Color x:Key="PrimaryColor">#E91F64</Color>
+            <Color x:Key="PageDefaultColor">#FAFAFA</Color>
+            <Color x:Key="ListCellSelectedColor">#DDD</Color>
+            <OnPlatform x:TypeArguments="x:String" x:Key="BoldFont">
+                <On Platform="Android" Value="OpenSans-Bold.ttf#Open Sans" />
+                <!--<On Platform="UWP" Value="/Assets/OpenSans-Bold.ttf#Open Sans" />
+            <On Platform="iOS" Value="OpenSans-Bold" />-->
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="NormalFont">
+                <On Platform="Android" Value="OpenSans-Regular.ttf#Open Sans" />
+                <!--<On Platform="UWP" Value="/Assets/OpenSans-Regular.ttf#Open Sans" />
+            <On Platform="iOS" Value="OpenSans-Regular" />-->
+            </OnPlatform>
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="#332196F3" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+            <!--<Style x:Key="MetarialText" TargetType="material:MaterialTextField">
+                <Setter  Property="PlaceholderColor" Value="#6D6D6D"></Setter>
+                <Setter  Property="TintColor" Value="#255073"></Setter>
+                <Setter  Property="AlwaysShowUnderline" Value="True"></Setter>
+                <Setter  Property="UnderlineColor" Value="#6D6D6D"></Setter>
+                <Setter  Property="HorizontalPadding" Value="0"></Setter>
+                <Setter  Property="TextColor" Value="#222"></Setter>
+                <Setter  Property="BackgroundColor" Value="Transparent"></Setter>
+                <Setter  Property="ShouldAnimateUnderline" Value="True"></Setter>
+                <Setter  Property="ErrorColor" Value="#B00020"></Setter>
+                <Setter  Property="TextFontSize" Value="13"></Setter>
+                <Setter  Property="Margin" Value="0,-20,0,0"></Setter>
+                <Setter Property="PlaceholderFontFamily" Value="{StaticResource NormalFont}"></Setter>
+                <Setter Property="TextFontFamily" Value="{StaticResource NormalFont}"></Setter>
+                --><!--<Setter Property="TextFontFamily" Value="verdana.ttf#verdana"></Setter>
+                <Setter Property="PlaceholderFontFamily" Value="verdana.ttf#verdana"></Setter>--><!--
+            </Style>-->
+            <Style TargetType="material:MaterialButton" x:Key="MatPrimaryButton">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"></Setter>
+                <Setter Property="CornerRadius" Value="10"></Setter>
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="FontFamily" Value="{StaticResource NormalFont}"></Setter>
+                <!--<Setter Property="FontFamily" Value="sans-serif"></Setter>-->
+            </Style>
+        </ResourceDictionary>        
+    </Application.Resources>
+</Application>
